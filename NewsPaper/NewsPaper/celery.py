@@ -1,6 +1,4 @@
 import os
-from _ast import arg
-
 from celery import Celery
 from celery.schedules import crontab
 

@@ -18,7 +18,8 @@ from .tasks import hello, printer
 
 class IndexView(View):
     def get(self, request):
-        printer.apply_async([10], eta=datetime.now() + timedelta(seconds=5))  # сдвиг на 5 секунд
+        printer.apply_async([10],
+                            eta = datetime.now() + timedelta(seconds=5))
         hello.delay()
         return HttpResponse('Hello!')
 

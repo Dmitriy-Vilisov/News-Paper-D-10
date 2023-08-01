@@ -22,6 +22,7 @@ from django.contrib.auth.models import Group
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('pages/', include('django.contrib.flatpages.urls')),
     path('news/', include('news.urls')),
     path('accounts/', include('allauth.urls')),

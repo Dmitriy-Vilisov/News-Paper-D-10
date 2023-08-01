@@ -3,6 +3,7 @@ from .views import PostsList, PostDetail, PostCreate, PostUpdate, PostDelete, Po
 from news.views import CategoryListView
 from .views import subscribe, IndexView
 
+
 urlpatterns = [
     path('', PostsList.as_view(), name='news_list'),
     path('<int:pk>', PostDetail.as_view(), name='post_detail'),
